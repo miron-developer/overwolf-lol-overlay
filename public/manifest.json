@@ -1,0 +1,71 @@
+{
+  "manifest_version": 1,
+  "type": "WebApp",
+  "meta": {
+    "name": "LOL Stats Overlay",
+    "description": "League of Legends statistics overlay",
+    "version": "0.1.0",
+    "minimum-overwolf-version": "0.160.0",
+    "author": "miron.arystan9",
+    "icon": "IconMouseOver.png",
+    "icon_gray": "IconMouseNormal.png",
+    "launcher_icon": "desktop-icon.ico",
+    "window_icon": "TaskbarIcon.png"
+  },
+  "permissions": ["Extensions", "Streaming", "Profile", "GameInfo"],
+  "data": {
+    "game_targeting": {
+      "type": "dedicated",
+      "game_ids": [
+        21216, 7764, 5426, 21634, 8032, 10844, 10906, 10826, 21404, 7212, 21640,
+        7314, 21626, 8954
+      ]
+    },
+    "game_events": [
+      21216, 7764, 5426, 21634, 8032, 10844, 10906, 10826, 21404, 7212, 21640,
+      7314, 21626, 8954
+    ],
+    "launch_events": [
+      {
+        "event": "GameLaunch",
+        "event_data": {
+          "game_ids": [
+            21216, 7764, 5426, 21634, 8032, 10844, 10906, 10826, 21404, 7212,
+            21640, 7314, 21626, 8954
+          ]
+        },
+        "start_minimized": true
+      }
+    ],
+    "start_window": "background",
+    "windows": {
+      "background": {
+        "file": "index.html",
+        "background_optimization": false,
+        "is_background_page": true
+      },
+      "in_game": {
+        "file": "index.html",
+        "in_game_only": true,
+        "focus_game_takeover": "ReleaseOnHidden",
+        "block_top_window_navigation": true,
+        "transparent": true,
+        "resizable": true,
+        "size": {
+          "width": 250,
+          "height": 350
+        },
+        "start_position": {
+          "top": 100,
+          "left": 12
+        }
+      }
+    },
+    "force_browser": "user",
+    "developer": {
+      "enable_auto_refresh": true,
+      "reload_delay": 1000,
+      "filter": "*.*"
+    }
+  }
+}

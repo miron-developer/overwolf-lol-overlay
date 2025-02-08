@@ -1,0 +1,42 @@
+.ingame--container {
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+
+  > *:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.ingame--kda {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 30px;
+
+  // for search case keep full classname instead of &__kill and so on
+  .ingame--kda__kill {
+    color: green;
+  }
+  .ingame--kda__death {
+    color: red;
+  }
+  .ingame--kda__assist {
+    color: yellow;
+  }
+}
+
+.ingame--btn {
+  padding: 5px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.ingame--last-events {
+  max-height: 130px;
+
+  word-wrap: break-word;
+  overflow: auto;
+}

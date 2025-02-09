@@ -1,3 +1,10 @@
+## !Note!
+
+- I got only temporary access to Overwolf API's, so if `7-9 March 2025` passed already, the project can not working, due to expired access. In this case, I recommend to get [own access](https://dev.overwolf.com/ow-native/getting-started/submitting-an-app-proposal)
+- Then replace `manifest.author` in `public/manifest.json` to your `account name`
+
+![Overlay example](./temporary-granted.png)
+
 ## 🚀 Quick Start
 
 ### Prerequisites
